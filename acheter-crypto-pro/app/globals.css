@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0f1115;
+  --muted: #6e6e73;
+  --cream: #f7f8fa;
+  --sand: #ffffff;
+  --gold: #0f1115;
+  --line: #e7e9ee;
+  --blue: #0a66ff;
+  --amber: #0f1115;
+  --surface: #ffffff;
+  --accent-grad: linear-gradient(90deg, #2fa8ff 0%, #7b61ff 52%, #e45dff 100%);
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Inter, Roboto, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+h1,
+h2 {
+  color: #0f1115 !important;
+  font-weight: 800 !important;
+}
+
+a { color: inherit; text-decoration: none; }
+::selection { background: rgba(20, 184, 166, 0.25); color: var(--ink); }
+
+.premium-container { @apply mx-auto max-w-7xl px-4 md:px-6; }
+.premium-card { @apply rounded-lg border border-line bg-white p-6 shadow-premium; }
+.page-section { @apply relative overflow-hidden px-4 py-14 md:px-6 md:py-20; }
+
+.crypto-grid {
+  background: transparent;
+}
+
+main,
+section,
+header,
+footer {
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+.shadow-premium,
+.shadow-hero {
+  box-shadow: none !important;
+}
+
+.text-gold {
+  color: #0f1115 !important;
+}
+
+.accent-gradient-bg {
+  background-image: var(--accent-grad);
+}
+
+.accent-gradient-text {
+  background-image: var(--accent-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+.market-marquee {
+  animation: marquee 34s linear infinite;
+  will-change: transform;
+}
+
+.market-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

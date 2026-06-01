@@ -1,0 +1,76 @@
+# Multilingual redirections - Legacy URLs to language-prefixed versions
+/market /fr/marche-cryptomonnaies-temps-reel 301
+/knowledge /fr/comprendre-les-cryptomonnaies 301
+/solutions /fr/solutions 301
+/about /fr/about 301
+/contact /fr/contact 301
+/support /fr/support 301
+/values /fr/values 301
+/faq /fr/faq 301
+/articles /fr/articles 301
+/dictionnaire-crypto /fr/dictionnaire-crypto 301
+/politique-de-confidentialite /fr/politique-de-confidentialite 301
+/conditions-utilisation /fr/conditions-utilisation 301
+/politique-entreprise /fr/politique-entreprise 301
+
+# Legacy URL redirects (redirections spécifiques d'abord)
+)
+/knowledge/crypto /fr/formation/comprendre-la-crypto 301
+/knowledge/crypto/module-1 /fr/formation/comprendre-la-crypto/fondamentaux-blockchain 301
+/knowledge/crypto/module-2 /fr/formation/comprendre-la-crypto/principes-decentralisation 301
+/knowledge/crypto/module-3 /fr/formation/comprendre-la-crypto/cryptographie-securite 301
+/knowledge/crypto/module-4 /fr/formation/comprendre-la-crypto/types-blockchain 301
+/knowledge/crypto/module-5 /fr/formation/comprendre-la-crypto/bitcoin-histoire 301
+/knowledge/crypto/module-6 /fr/formation/comprendre-la-crypto/ethereum-smart-contracts 301
+/knowledge/crypto/module-7 /fr/formation/comprendre-la-crypto/types-tokens 301
+/knowledge/crypto/module-8 /fr/formation/comprendre-la-crypto/securite-wallets 301
+/knowledge/crypto/module-9 /fr/formation/comprendre-la-crypto/indicateurs-techniques 301
+/knowledge/crypto/module-10 /fr/formation/comprendre-la-crypto/analyse-graphiques 301
+/knowledge/crypto/module-11 /fr/formation/comprendre-la-crypto/patterns-trading 301
+/knowledge/crypto/module-12 /fr/formation/comprendre-la-crypto/gestion-risque 301
+/knowledge/crypto/module-13 /fr/formation/comprendre-la-crypto/protocoles-defi 301
+/knowledge/crypto/module-14 /fr/formation/comprendre-la-crypto/yield-farming 301
+/knowledge/crypto/module-15 /fr/formation/comprendre-la-crypto/pools-liquidite 301
+/knowledge/crypto/module-16 /fr/formation/comprendre-la-crypto/stablecoins 301
+/knowledge/crypto/module-17 /fr/formation/comprendre-la-crypto/securisation-wallets 301
+/knowledge/crypto/module-18 /fr/formation/comprendre-la-crypto/arnaques-crypto 301
+/knowledge/crypto/module-19 /fr/formation/comprendre-la-crypto/gestion-portfolio 301
+/knowledge/crypto/module-20 /fr/formation/comprendre-la-crypto/strategies-avancees 301
+/course-completion /fr/formation/certificat-reussite 301
+
+# Fix formation module redirects - specific routes first
+/formation/comprendre-la-crypto/fondamentaux-blockchain /fr/formation/comprendre-la-crypto/fondamentaux-blockchain 301
+/formation/comprendre-la-crypto/principes-decentralisation /fr/formation/comprendre-la-crypto/principes-decentralisation 301
+/formation/comprendre-la-crypto/cryptographie-securite /fr/formation/comprendre-la-crypto/cryptographie-securite 301
+/formation/comprendre-la-crypto/types-blockchain /fr/formation/comprendre-la-crypto/types-blockchain 301
+/formation/comprendre-la-crypto/bitcoin-histoire /fr/formation/comprendre-la-crypto/bitcoin-histoire 301
+/formation/comprendre-la-crypto/ethereum-smart-contracts /fr/formation/comprendre-la-crypto/ethereum-smart-contracts 301
+/formation/comprendre-la-crypto/types-tokens /fr/formation/comprendre-la-crypto/types-tokens 301
+/formation/comprendre-la-crypto/securite-wallets /fr/formation/comprendre-la-crypto/securite-wallets 301
+/formation/comprendre-la-crypto/indicateurs-techniques /fr/formation/comprendre-la-crypto/indicateurs-techniques 301
+/formation/comprendre-la-crypto/analyse-graphiques /fr/formation/comprendre-la-crypto/analyse-graphiques 301
+/formation/comprendre-la-crypto/patterns-trading /fr/formation/comprendre-la-crypto/patterns-trading 301
+/formation/comprendre-la-crypto/gestion-risque /fr/formation/comprendre-la-crypto/gestion-risque 301
+/formation/comprendre-la-crypto/protocoles-defi /fr/formation/comprendre-la-crypto/protocoles-defi 301
+/formation/comprendre-la-crypto/yield-farming /fr/formation/comprendre-la-crypto/yield-farming 301
+/formation/comprendre-la-crypto/pools-liquidite /fr/formation/comprendre-la-crypto/pools-liquidite 301
+/formation/comprendre-la-crypto/stablecoins /fr/formation/comprendre-la-crypto/stablecoins 301
+/formation/comprendre-la-crypto/securisation-wallets /fr/formation/comprendre-la-crypto/securisation-wallets 301
+/formation/comprendre-la-crypto/arnaques-crypto /fr/formation/comprendre-la-crypto/arnaques-crypto 301
+/formation/comprendre-la-crypto/gestion-portfolio /fr/formation/comprendre-la-crypto/gestion-portfolio 301
+/formation/comprendre-la-crypto/strategies-avancees /fr/formation/comprendre-la-crypto/strategies-avancees 301
+/formation/comprendre-la-crypto /fr/formation/comprendre-la-crypto 301
+
+/company-policy /fr/politique-entreprise 301
+/dictionary /fr/dictionnaire-crypto 301
+/dictionary/* /fr/dictionnaire-crypto/:splat 301
+
+# Fix article and dictionary sub-routes
+/articles/* /fr/articles/:splat 301
+/dictionnaire-crypto/* /fr/dictionnaire-crypto/:splat 301
+
+# SPA fallback - DOIT être en dernier pour que React Router gère les routes dynamiques
+# Netlify sert automatiquement les assets statiques existants, pas besoin de règles explicites
+
+# Fallback SPA pour toutes les autres routes (sauf les assets existants)
+/* /index.html 200

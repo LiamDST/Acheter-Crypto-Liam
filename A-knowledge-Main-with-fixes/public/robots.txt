@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Allow social media crawlers
+User-agent: facebookexternalhit/*
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Prevent access to auth pages
+Disallow: /reset-password
+
+# Explicitly allow dictionary pages
+Allow: /dictionnaire-crypto/
+
+# Sitemap location
+Sitemap: https://alyah-knowledge.com/sitemap.xml
+Sitemap: https://alyah-knowledge.com/sitemap-dictionnaire.xml
+
+# Crawl delay for better server performance
+Crawl-delay: 1
